@@ -1,0 +1,27 @@
+tf几个简单函数：
+1、np.random.rand(2,100)：产生2 x 100的矩阵
+2、生成tensor的函数：
+tf.zeros(shape, dtype=tf.float32, name=None)；eg:tf.zeros([1]) 填充元素为0
+tf.constant(value, dtype=None, shape=None, name='Const')；eg:matrix1 = tf.constant([[3., 3.]])生成1 x 2维的矩阵
+tf.ones(shape, dtype=tf.float32, name=None) 填充元素为1
+--<>--
+tf.fill(dims, value, name=None)
+tf.ones_like(tensor, dtype=None, name=None)
+tf.zeros_like(tensor, dtype=None, name=None)
+3、生成序列：
+--<>--
+tf.range(start, limit, delta=1, name='range')
+tf.linspace(start, stop, num, name=None)
+4、生成随机数：
+tf.random_uniform(shape, minval=0.0, maxval=1.0, dtype=tf.float32, seed=None, name=None);eg:tf.random_uniform([1,2])是返回1 x 2的矩阵，产生的值在low到high之间，且是均匀分布
+--<>--
+tf.random_normal(shape, mean=0.0, stddev=1.0, dtype=tf.float32, seed=None, name=None)
+tf.truncated_normal(shape, mean=0.0, stddev=1.0, dtype=tf.float32, seed=None, name=None)
+tf.random_shuffle(value, seed=None, name=None)
+5、补充函数：
+tf.assign(A, new_number): 这个函数的功能主要是把A的值变为new_number
+tf.train.GradientDescentOptimizer（learning rate）
+tf.matmul和np.dot的作用是等价的
+tf.add()
+tf.sub()
+
